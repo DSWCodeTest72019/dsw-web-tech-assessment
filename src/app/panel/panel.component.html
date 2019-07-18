@@ -1,0 +1,29 @@
+<div class="panel">
+    <div class="panel__image">
+        <img [src]="'/assets/images/products/' + product.id + '.jpg'">
+    </div>
+    <div class="panel__brand">
+        {{product.brand}}
+    </div>
+    <div class="panel__name">
+        {{product.name}}
+    </div>
+    <div class="panel__price">
+        ${{product.price}}
+    </div>
+    <div class="panel__compValue" *ngIf="product.colors.compValue">
+        Comp. value ${{product.compValue}}
+    </div>
+    <div class="panel__rating rating" *ngIf="product.rating">
+        <div class="rating__star" *ngFor="let star of [0,1,2,3,4]" 
+        [ngClass]="getStarClass(star)"></div>
+        <div class="rating__count">({{randomNumber()}})</div>
+    </div>
+    <div class="panel__swatches" *ngIf="product.colors.length > 1">
+        <div class="swatchCircle" *ngFor="let color of product.colors" 
+        [ngClass]="[product.activeColor === color.id ? 'swatchCircle--selected': '',
+        true ? 'swatchCircle--' + color.displayName: '']">
+            <div></div>
+        </div>
+    </div>
+</div>

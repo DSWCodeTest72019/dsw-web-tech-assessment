@@ -1,0 +1,70 @@
+.filtering {
+    padding-right: 20px;
+
+    @media (max-width: 767px){
+        margin: 15px 20px 5px;
+        padding: 0;
+    }
+
+    &__store {
+        margin-bottom: 10px;
+
+        @media (max-width: 767px){
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-family: custom-bold;
+            margin-right: 20px;
+            padding-left: 30px;
+            position: relative;
+            
+            @media (max-width: 767px){
+                display: block;
+                margin-bottom: 15px;
+            }
+            &:before {
+                border: 2px solid #aaa;
+                content: "";
+                height: 15px;
+                left: 0px;
+                position: absolute;
+                width: 15px;
+            }
+        }
+        a {
+            color: black;
+            margin-left: 20px
+        }
+    }
+    &__buttons{
+        align-items: stretch;
+        display: flex;
+    }
+
+    &__button {
+        background-color: black;
+        border: none;
+        color: white;
+        font-family: custom-bold;
+        margin-right: 5px;
+        min-width: 220px;
+        padding: 10px 10px;
+
+        @media (max-width: 767px){
+            flex-grow: 1;
+            min-width: 120px;
+            padding: 15px 10px;
+            text-align: left;
+        }
+    }
+
+    &__layout {
+        background-image: url(/assets/images/grid.gif);
+        background-size: cover;
+        border: none;
+        display: flex;
+        padding: 5px;
+        width: 45px;
+    }
+}

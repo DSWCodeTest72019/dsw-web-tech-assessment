@@ -1,0 +1,101 @@
+.paging {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+
+    @media (max-width: 767px){
+        border-bottom: 1px solid #ccc;
+        flex-direction:column;
+        margin: 0 20px 10px;
+        padding: 0 0 10px 0;
+    }
+
+    h1 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin: 0 0 10px;
+        width: 100%;
+        
+        @media (max-width: 767px){
+            font-size: 22px;
+            margin: 0 0 5px;
+        }
+    }
+
+    &__pages {
+        align-items: center;
+        display: flex;
+    }
+
+    &__showing {
+        margin-right: 24px;
+    }
+
+    &__icon {
+        cursor: pointer;
+        height: 20px;
+        position: relative;
+
+        &--left {
+            padding-left: 10px;
+
+            &:before {
+                border-right:8px solid #ccc; 
+                left: 0;
+            }
+        }
+        &--right {
+            padding-right: 10px;
+
+            &:after {
+                border-left:8px solid black; 
+                right: 0;
+            }
+        }
+
+        &:before, &:after {
+            border-bottom: 6px solid transparent; 
+            border-top: 6px solid transparent;
+            content: "";
+            height: 0; 
+            position: absolute;
+            top: 4px;
+            width: 0; 
+        }
+    }
+
+    &__links {
+        a {
+            color: black;
+            font-family: auto;
+            margin: 0 5px;
+            text-decoration: none;
+
+            @media (max-width: 767px){
+                margin: 0 12px 0 0;
+            }
+
+            &:first-child {
+                text-decoration: underline;
+
+                @media (max-width: 767px){
+                    margin-left: 12px;
+                }
+            }
+            &:nth-child(n + 5) {
+                display: none;
+            }
+            &:last-child {
+                display: inline-block;
+                position: relative;
+                &:before{
+                    content: "...";
+                    margin-right: 5px;
+                    @media (max-width: 767px){
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

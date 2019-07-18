@@ -1,4 +1,19 @@
-[
+import { Injectable } from '@angular/core';
+import { Product } from '../../types/product';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  constructor() { }
+
+  getProducts() : Product[] {
+    return PRODUCTS
+  }
+}
+
+const PRODUCTS : Product[] = [
 	{
 		id: 1,
 		brand: "Aston Grey",

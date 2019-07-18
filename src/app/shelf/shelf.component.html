@@ -1,0 +1,20 @@
+<div class="shelf">
+    <app-banner-ad></app-banner-ad>
+    <div class="shelf__topBar">
+        <app-paging [totalProducts]="products.length"></app-paging>
+        <app-filtering></app-filtering>
+    </div>
+    <div class="shelf__panels" >
+        <app-panel [product]="product" *ngFor="let product of products"></app-panel>
+    </div>
+    <div class="shelf__sticky">
+        <div class="stickyBox">
+            <span class="stickyBox__icon stickyBox__icon--top"></span>
+            <span>TOP</span>
+        </div>
+        <div class="stickyBox">
+            <span class="stickyBox__icon stickyBox__icon--filter"></span>
+            <span>FILTER</span>
+        </div>
+    </div>
+</div>

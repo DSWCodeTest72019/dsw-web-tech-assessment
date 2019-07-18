@@ -1,0 +1,16 @@
+.bannerAd {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+
+    &__text{
+        line-height: 18px;
+        max-width: 80%;
+        margin: auto;
+        padding-bottom: 15px;
+        text-align: center;
+
+        @media (max-width: 767px){
+            max-width: 95%;
+        }
+    }
+}

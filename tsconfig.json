@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "allowUnusedLabels": false,
+    "baseUrl": "./",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist/out-tsc",
+    "pretty": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "watch": true,
+  },
+  "exclude": [
+    "node_modules", "dist"
+  ]
+}
