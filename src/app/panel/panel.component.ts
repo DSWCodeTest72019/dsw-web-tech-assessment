@@ -8,6 +8,8 @@ import { Product } from '../../types/product';
 })
 export class PanelComponent implements OnInit {
   @Input() product : Product;
+  randomNumber : number = Math.floor(Math.random() * 50) + 1;
+
   constructor() { }
 
   ngOnInit() {
@@ -24,8 +26,5 @@ export class PanelComponent implements OnInit {
     }else {
       return "rating__star--half"
     }
-  }
-  randomNumber() {
-    return Math.floor(Math.random() * 50) + 1;
   }
 }
